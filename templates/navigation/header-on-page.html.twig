@@ -1,22 +1,22 @@
 <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-        <a href="" class="logo d-flex align-items-center">
+        <a href="{{ path('app_home') }}" class="logo d-flex align-items-center">
 
             <h1 class="sitename">BeforYou</h1>
         </a>
 
         <nav id="navmenu" class="navmenu">
             <ul>
-                <li><a href="" class="active">Accueil</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#featured-services">Nos filiales</a></li>
-                <li><a href="#features">Nos services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#team">Equipe</a></li>
-                <li><a href="#blog-posts">Actualités</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="{{ path('app_about') }}">À propos</a></li>
+                <li><a href="{{ path('app_nos_filiales') }}">Nos filiales</a></li>
+                <li><a href="{{ path('app_nos_services') }}">Nos services</a></li>
+                <li><a href="{{ path('app_nos_realisations') }}">Nos réalisations</a></li>
+                <li><a href="{{ path('app_notre_equipe') }}">Notre équipe</a></li>
+                <li><a href="{{ path('app_notre_actualites') }}">Actualités</a></li>
+                <li><a href="{{ path('app_notre_contact') }}">Contact</a></li>
             </ul>
+
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 

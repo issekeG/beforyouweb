@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Devis{% endblock %}
+
+{% block body %}
+    <h1>Devis</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ devi.id }}</td>
+            </tr>
+            <tr>
+                <th>FullName</th>
+                <td>{{ devi.fullName }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ devi.telephone }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ devi.email }}</td>
+            </tr>
+            <tr>
+                <th>Entreprise</th>
+                <td>{{ devi.entreprise }}</td>
+            </tr>
+            <tr>
+                <th>Budget</th>
+                <td>{{ devi.budget }}</td>
+            </tr>
+            <tr>
+                <th>Delais</th>
+                <td>{{ devi.delais }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ devi.description }}</td>
+            </tr>
+            <tr>
+                <th>Document</th>
+                <td>{{ devi.document }}</td>
+            </tr>
+            <tr>
+                <th>Filiale</th>
+                <td>{{ devi.filiale }}</td>
+            </tr>
+            <tr>
+                <th>Services</th>
+                <td>{{ devi.services }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_devis_index') }}">back to list</a>
+
+    <a href="{{ path('app_devis_edit', {'id': devi.id}) }}">edit</a>
+
+    {{ include('devis/_delete_form.html.twig') }}
+{% endblock %}

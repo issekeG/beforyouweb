@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}
+
+    {% include 'navigation/header-on-page.html.twig' %}
+{% endblock %}
+
+{% block main %}
+
+    <main class="main">
+
+        <!-- Page Title -->
+        <div class="page-title dark-background">
+            <div class="container position-relative">
+                <h1>Page d'inscription</h1>
+            </div>
+        </div><!-- End Page Title -->
+
+        <!-- Contact Section -->
+        {% include 'sections/register.html.twig' %}
+        <!-- /Contact Section -->
+
+    </main>
+
+{% endblock %}

@@ -1,0 +1,52 @@
+liip_imagine:
+    driver: "gd"  # ou "imagick" si installé, meilleur rendu
+
+    resolvers:
+        default:
+            web_path:
+                web_root: '%kernel.project_dir%/public'
+                cache_prefix: /media/cache
+
+    filter_sets:
+        cache: ~  # nécessaire
+        thumbnail_realisation:
+            quality: 85
+            filters:
+                thumbnail:
+                    size: [1024, 768]  # largeur x hauteur
+                    mode: outbound    # crop pour remplir exactement la taille
+
+        thumbnail_team:
+            quality: 85
+            filters:
+                thumbnail:
+                    size: [ 600, 600 ]
+                    mode: outbound
+
+        thumbnail_testimony:
+            quality: 85
+            filters:
+                thumbnail:
+                    size: [ 400, 400 ]
+                    mode: outbound
+
+        thumbnail_actuality:
+            quality: 85
+            filters:
+                thumbnail:
+                    size: [1024, 768]
+                    mode: outbound
+
+        thumbnail_filiale:
+            quality: 85
+            filters:
+                thumbnail:
+                    size: [ 700, 400 ]
+                    mode: outbound
+
+        thumbnail_about:
+            quality: 85
+            filters:
+                thumbnail:
+                    size: [ 700, 500 ]
+                    mode: outbound

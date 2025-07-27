@@ -1,0 +1,38 @@
+
+
+    <div class="container">
+
+        <div class="row gy-4">
+            <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="100">
+                <img src="assets/img/about.jpg" class="img-fluid" alt="">
+                <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
+            </div>
+            <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
+                <h3>BE FOR YOU, L’ENERGIE DU POSSIBLE  ?</h3>
+                <p class="fst-italic">
+                    Le Groupe BE FOR YOU est une vision enracinée dans la réalité gabonaise et tournée vers l’impact. Acteur majeur et visionnaire, le Groupe rassemble plusieurs filiales spécialisées qui partagent une même ambition : servir, transformer et inspirer.
+                </p>
+                <p>Depuis sa création, le Groupe s’est construit autour de valeurs fortes</p>
+                <ul>
+                    <li><i class="bi bi-check2-all"></i> <span>Professionnalisme : la rigueur guide chacune de nos actions.</span></li>
+                    <li><i class="bi bi-check2-all"></i> <span>Engagement : nous agissons avec responsabilité et impact.</span></li>
+                    <li><i class="bi bi-check2-all"></i> <span>Créativité : chaque solution est pensée sur mesure.</span></li>
+                    <li><i class="bi bi-check2-all"></i> <span>Proximité : être proche de nos clients et de leurs réalités.</span></li>
+                </ul>
+                <p>
+                    Grâce à une gouvernance solide et une stratégie de croissance maîtrisée, nous avons su développer un réseau d’entreprises complémentaires, chacune experte dans son secteur, pour répondre aux besoins d’un monde en constante évolution.
+                </p>
+                {% block ensavoirplus %}
+                <div class="col-auto mt-5  text-center">
+                    <a href="{{ path('app_about') }}" class="btn btn-view-more rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2">
+                        En savoir plus <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+                {% endblock %}
+            </div>
+
+        </div>
+
+
+    </div>
+

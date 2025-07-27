@@ -1,0 +1,117 @@
+<section class="featured-services section">
+    <div class="container section-title pb-1" data-aos="fade-up">
+        <h2 style="color: #249ED9">Filiale water</h2>
+        <p>Liste des services de la filiale beforyou water</p>
+    </div>
+
+    <div class="container">
+
+        <div class="swiper init-swiper">
+
+
+
+            <div class="swiper-wrapper align-items-center">
+                <!-- Forage de puits -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-item item-cyan position-relative h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="icon">
+                                <i class="bi bi-droplet-fill"></i> <!-- Représente l'eau -->
+                            </div>
+                            <a href="{{ path('app_nos_services_detail', {slug: 'forage-de-puits'}) }}" class="stretched-link">
+                                <h3>Forage de puits</h3>
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ path('app_nos_services_detail', {slug: 'forage-de-puits'}) }}" class="btn btn-sm btn-outline-primary">Consulter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Suivi et entretien régulier -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-item item-orange position-relative h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="icon">
+                                <i class="bi bi-tools"></i> <!-- Outils pour symboliser l'entretien -->
+                            </div>
+                            <a href="{{ path('app_nos_services_detail', {slug: 'suivi-entretien-regulier'}) }}" class="stretched-link">
+                                <h3>Suivi et entretien régulier</h3>
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ path('app_nos_services_detail', {slug: 'suivi-entretien-regulier'}) }}" class="btn btn-sm btn-outline-primary">Consulter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Systèmes de stockage / distribution -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-item item-teal position-relative h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="icon">
+                                <i class="bi bi-box-seam"></i> <!-- Boîte pour représenter le stockage -->
+                            </div>
+                            <a href="{{ path('app_nos_services_detail', {slug: 'systemes-stockage-distribution'}) }}" class="stretched-link">
+                                <h3>Systèmes de stockage / distribution</h3>
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ path('app_nos_services_detail', {slug: 'systemes-stockage-distribution'}) }}" class="btn btn-sm btn-outline-primary">Consulter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Installation de pompes manuelles et motorisées -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-item item-red position-relative h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="icon">
+                                <i class="bi bi-lightning-charge-fill"></i> <!-- Énergie pour symboliser moteur/pompe -->
+                            </div>
+                            <a href="{{ path('app_nos_services_detail', {slug: 'installation-pompes-manuelles-motorisees'}) }}" class="stretched-link">
+                                <h3>Installation de pompes manuelles et motorisées</h3>
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ path('app_nos_services_detail', {slug: 'installation-pompes-manuelles-motorisees'}) }}" class="btn btn-sm btn-outline-primary">Consulter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script type="application/json" class="swiper-config">
+                {
+                    "loop": true,
+                    "speed": 600,
+                    "autoplay": {
+                        "delay": 3000
+                    },
+                    "slidesPerView": "auto",
+                    "pagination": {
+                        "el": ".swiper-pagination",
+                        "type": "bullets",
+                        "clickable": true
+                    },
+                    "breakpoints": {
+                        "320": {
+                            "slidesPerView": 1,
+                            "spaceBetween": 10
+                        },
+                        "768": {
+                            "slidesPerView": 2,
+                            "spaceBetween": 35
+                        },
+
+                        "1200":  { "slidesPerView": 3, "spaceBetween": 40 },
+                        "1400":  { "slidesPerView": 4, "spaceBetween": 60 }
+                    }
+                }
+            </script>
+
+            <!-- Pagination si activée dans le JSON -->
+            <div class="swiper-pagination mt-3"></div>
+        </div>
+    </div>
+
+</section>

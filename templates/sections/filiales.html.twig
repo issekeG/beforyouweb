@@ -1,0 +1,136 @@
+<section id="featured-services" class="featured-services section">
+    <div class="container section-title pb-1" data-aos="fade-up">
+        <h2>Nos filiales</h2>
+        <p>Chaque filiale du Groupe BE FOR YOU incarne notre vision tout en apportant une expertise propre</p>
+    </div>
+
+    <div class="container">
+        <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+                {
+                    "loop": true,
+                    "speed": 600,
+                    "autoplay": {
+                        "delay": 3000
+                    },
+                    "slidesPerView": "auto",
+                    "pagination": {
+                        "el": ".swiper-pagination",
+                        "type": "bullets",
+                        "clickable": true
+                    },
+                    "breakpoints": {
+                        "320": {
+                            "slidesPerView": 1,
+                            "spaceBetween": 10
+                        },
+                        "768": {
+                            "slidesPerView": 2,
+                            "spaceBetween": 35
+                        },
+
+                        "1200":  { "slidesPerView": 3, "spaceBetween": 40 },
+                        "1400":  { "slidesPerView": 4, "spaceBetween": 60 }
+                    }
+                }
+            </script>
+
+
+            <div class="swiper-wrapper align-items-center">
+                <!-- Industrie -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-item item-cyan position-relative h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="icon">
+                                <i class="bi bi-gear-fill"></i>
+                            </div>
+                            <a href="{{ path('app_nos_filiales_detail', {slug:'beforyou-industrie'}) }}" class="stretched-link">
+                                <h3>Industrie</h3>
+                            </a>
+                            <p>Structure dédiée à la construction, aux études de terrain et à la réhabilitation des bâtiments.</p>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ path('app_nos_filiales_detail', {slug:'beforyou-industrie'}) }}" class="btn btn-sm btn-outline-primary">Consulter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Communication -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-item item-orange position-relative h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="icon">
+                                <i class="bi bi-megaphone-fill"></i>
+                            </div>
+                            <a href="{{ path('app_nos_filiales_detail', {slug:'beforyou-communication'}) }}" class="stretched-link">
+                                <h3>Communication</h3>
+                            </a>
+                            <p>Agence de communication et marketing, experte en communication digitale et événementiel.</p>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ path('app_nos_filiales_detail', {slug:'beforyou-communication'}) }}" class="btn btn-sm btn-outline-primary">Consulter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- School -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-item item-teal position-relative h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="icon">
+                                <i class="bi bi-mortarboard-fill"></i>
+                            </div>
+                            <a href="{{ path('app_nos_filiales_detail', {slug:'beforyou-school'}) }}" class="stretched-link">
+                                <h3>School</h3>
+                            </a>
+                            <p>Notre première filiale, professionnelle dans la confection des uniformes scolaires, dans l’élaboration des chartes visuelles pour établissements scolaires.</p>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ path('app_nos_filiales_detail', {slug:'beforyou-school'}) }}" class="btn btn-sm btn-outline-primary">Consulter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- water -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-item item-red position-relative h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="icon">
+                                <i class="bi bi-printer-fill"></i>
+                            </div>
+                            <a href="{{ path('app_nos_filiales_detail', {slug:'beforyou-water'}) }}" class="stretched-link">
+                                <h3>Water</h3>
+                            </a>
+                            <p>Société permettant aux populations, aux collectivités et aux particuliers d’accéder à l’eau par le biais des forages.</p>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ path('app_nos_filiales_detail', {slug:'beforyou-water'}) }}" class="btn btn-sm btn-outline-primary">Consulter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Print -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-item item-orange position-relative h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="icon">
+                                <i class="bi bi-printer-fill"></i>
+                            </div>
+                            <a href="{{ path('app_nos_filiales_detail', {slug:'beforyou-print'}) }}" class="stretched-link">
+                                <h3>Print</h3>
+                            </a>
+                            <p>Entreprise technologique spécialisée dans l’impression numérique et la broderie industrielle.</p>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ path('app_nos_filiales_detail', {slug:'beforyou-print'}) }}" class="btn btn-sm btn-outline-primary">Consulter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination si activée dans le JSON -->
+            <div class="swiper-pagination mt-3"></div>
+        </div>
+    </div>
+
+</section>

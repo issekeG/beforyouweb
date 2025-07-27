@@ -1,0 +1,81 @@
+<section id="team" class="team featured-services section pb-1">
+
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Notre équipe dirigeante</h2>
+        <p>Découvrez les femmes et les hommes qui pilotent Beforyou avec passion, expertise et engagement pour garantir la réussite de chaque projet.</p>
+    </div>
+
+    <!-- End Section Title -->
+
+    <div class="container">
+        <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+                {
+                    "loop": true,
+                    "speed": 600,
+                    "autoplay": {
+                        "delay": 3000
+                    },
+                    "slidesPerView": "auto",
+                    "pagination": {
+                        "el": ".swiper-pagination",
+                        "type": "bullets",
+                        "clickable": true
+                    },
+                    "breakpoints": {
+                        "320": {
+                            "slidesPerView": 1,
+                            "spaceBetween": 10
+                        },
+                        "768": {
+                            "slidesPerView": 2,
+                            "spaceBetween": 35
+                        },
+
+                        "1200":  { "slidesPerView": 4, "spaceBetween": 40 }
+
+                    }
+                }
+            </script>
+
+
+            <div class="swiper-wrapper align-items-center">
+                <!-- Industrie -->
+                {% for team in teams %}
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-item item-cyan position-relative h-100 d-flex flex-column justify-content-between" style="padding: 1px 2px 1px 2px">
+                        <div class="member" data-aos="fade-up" data-aos-delay="100">
+                            <div class="member-img">
+                                <img src="{{ asset('upload/images/team/' ~ team.photo) | imagine_filter('thumbnail_team') }}" class="img-fluid" alt="Photo de {{ team.fullname }}">
+
+                                <div class="social">
+                                    {% if team.twitter %}
+                                        <a href="{{ team.twitter }}" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                                    {% endif %}
+                                    {% if team.facebook %}
+                                        <a href="{{ team.facebook }}" target="_blank"><i class="bi bi-facebook"></i></a>
+                                    {% endif %}
+                                    {% if team.linkedin %}
+                                        <a href="{{ team.linkedin }}" target="_blank"><i class="bi bi-linkedin"></i></a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class= "member-info text-center">
+                                <h4>{{ team.fullname }}</h4>
+                                <span>{{ team.titre }}</span>
+                                <p>{{ team.description | raw }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+
+            </div>
+
+            <!-- Pagination si activée dans le JSON -->
+            <div class="swiper-pagination mt-3"></div>
+        </div>
+    </div>
+
+</section>

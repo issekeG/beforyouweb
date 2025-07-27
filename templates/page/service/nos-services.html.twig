@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}
+
+    {% include 'navigation/header-on-page.html.twig' %}
+{% endblock %}
+
+{% block main %}
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+        <div class="container position-relative">
+            <h1>Découvrez les services proposés par Beforyou</h1>
+            <p>Explorez l'ensemble de nos services, classés par filiale pour une navigation claire et efficace.</p>
+            <nav class="breadcrumbs">
+                <ol>
+                    <li><a href="{{ path('app_home') }}">Accueil</a></li>
+                    <li class="current">Nos services</li>
+                </ol>
+            </nav>
+        </div>
+
+    </div><!-- End Page Title -->
+
+      {% include 'sections/service-par-filiale/com-services.html.twig' %}
+      {% include 'sections/service-par-filiale/watter-services.html.twig' %}
+      {% include 'sections/service-par-filiale/industrie-services.html.twig' %}
+      {% include 'sections/service-par-filiale/print-services.html.twig' %}
+      {% include 'sections/service-par-filiale/school-services.html.twig' %}
+
+
+
+
+
+
+  </main>
+{% endblock %}

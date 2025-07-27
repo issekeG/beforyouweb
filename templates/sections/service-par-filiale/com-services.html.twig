@@ -1,0 +1,153 @@
+<section class="featured-services section">
+    <div class="container section-title pb-1" data-aos="fade-up">
+        <h2>Filiale Com</h2>
+        <p>Liste des services de la filiale beforyou com</p>
+    </div>
+
+    <div class="container">
+
+        <div class="swiper init-swiper">
+
+
+
+            <div class="swiper-wrapper align-items-center">
+
+                <!-- Création de sites web et applications -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-item item-cyan position-relative h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="icon">
+                                <i class="bi bi-code-slash"></i> <!-- Icône pour le développement -->
+                            </div>
+                            <a href="{{ path('app_nos_services_detail', {slug : 'creation-sites-web-applications'}) }}" class="stretched-link">
+                                <h3>Création de sites web et applications</h3>
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ path('app_nos_services_detail', {slug : 'creation-sites-web-applications'}) }}" class="btn btn-sm btn-outline-primary">Consulter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Événementiel -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-item item-orange position-relative h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="icon">
+                                <i class="bi bi-calendar-event"></i> <!-- Icône pour l’événementiel -->
+                            </div>
+                            <a href="{{ path('app_nos_services_detail', {slug: 'evenementiel'}) }}" class="stretched-link">
+                                <h3>Événementiel</h3>
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ path('app_nos_services_detail', {slug: 'evenementiel'}) }}" class="btn btn-sm btn-outline-primary">Consulter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Réseaux sociaux -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-item item-cyan position-relative h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="icon">
+                                <i class="bi bi-share-fill"></i> <!-- Icône pour les réseaux sociaux -->
+                            </div>
+                            <a href="{{ path('app_nos_services_detail', {slug:'gestion-reseaux-sociaux'}) }}" class="stretched-link">
+                                <h3>Gestion de réseaux sociaux</h3>
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ path('app_nos_services_detail', {slug:'gestion-reseaux-sociaux'}) }}" class="btn btn-sm btn-outline-primary">Consulter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Communication -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-item item-orange position-relative h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="icon">
+                                <i class="bi bi-pencil-square"></i> <!-- Icône pour la création de contenu -->
+                            </div>
+                            <a href="{{ path('app_nos_services_detail',{slug: 'creation-communication'}) }}" class="stretched-link">
+                                <h3>Création de contenus de communication</h3>
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ path('app_nos_services_detail',{slug: 'creation-communication'}) }}" class="btn btn-sm btn-outline-primary">Consulter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Branding -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-item item-teal position-relative h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="icon">
+                                <i class="bi bi-palette-fill"></i> <!-- Icône pour le branding / design -->
+                            </div>
+                            <a href="{{ path('app_nos_services_detail', {slug : 'branding-identite-visuelledes-Institutions'}) }}" class="stretched-link">
+                                <h3>Branding &amp; identité visuelle</h3>
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ path('app_nos_services_detail', {slug : 'branding-identite-visuelledes-Institutions'}) }}" class="btn btn-sm btn-outline-primary">Consulter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conseil stratégique -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-item item-red position-relative h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="icon">
+                                <i class="bi bi-bar-chart-fill"></i> <!-- Icône pour le conseil en stratégie -->
+                            </div>
+                            <a href="{{ path('app_nos_services_detail', {slug : 'conseils-strategiques-communication-marketing'}) }}" class="stretched-link">
+                                <h3>Conseil stratégique en communication &amp; marketing</h3>
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ path('app_nos_services_detail', {slug : 'conseils-strategiques-communication-marketing'}) }}" class="btn btn-sm btn-outline-primary">Consulter</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <script type="application/json" class="swiper-config">
+                {
+                    "loop": true,
+                    "speed": 600,
+                    "autoplay": {
+                        "delay": 3000
+                    },
+                    "slidesPerView": "auto",
+                    "pagination": {
+                        "el": ".swiper-pagination",
+                        "type": "bullets",
+                        "clickable": true
+                    },
+                    "breakpoints": {
+                        "320": {
+                            "slidesPerView": 1,
+                            "spaceBetween": 10
+                        },
+                        "768": {
+                            "slidesPerView": 2,
+                            "spaceBetween": 35
+                        },
+
+                        "1200":  { "slidesPerView": 3, "spaceBetween": 40 },
+                        "1400":  { "slidesPerView": 4, "spaceBetween": 60 }
+                    }
+                }
+            </script>
+
+            <!-- Pagination si activée dans le JSON -->
+            <div class="swiper-pagination mt-3"></div>
+        </div>
+    </div>
+
+</section>

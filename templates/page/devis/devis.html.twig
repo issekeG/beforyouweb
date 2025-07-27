@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}
+
+    {% include 'navigation/header-on-page.html.twig' %}
+{% endblock %}
+
+{% block main %}
+
+    <main class="main">
+
+        <!-- Page Title -->
+        <div class="page-title dark-background">
+            <div class="container position-relative">
+                <h1>Demande de devis</h1>
+                <p>Vous avez un projet en tête ? Remplissez notre formulaire pour recevoir une estimation personnalisée adaptée à vos besoins.</p>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="{{ path('app_home') }}">Accueil</a></li>
+                        <li class="current">Demande de devis</li>
+                    </ol>
+                </nav>
+            </div>
+
+        </div><!-- End Page Title -->
+
+        <!-- Contact Section -->
+        {% include 'sections/devis.html.twig' %}
+        <!-- /Contact Section -->
+
+    </main>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+<section id="blog-posts" class="blog-posts section pb-1">
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Recente actualité</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+        <div class="row gy-4">
+
+            {% for evenement in evenements %}
+
+            <div class="col-lg-4">
+                <article>
+
+                    <div class="post-img">
+                        <img src="{{ asset('upload/images/event/' ~ evenement.image) | imagine_filter('thumbnail_actuality') }}" alt="{{ evenement.title}}" class="img-fluid">
+                    </div>
+
+                    <p class="post-category">{{ evenement.theme}} <span><time datetime="">Jan 1, 2022</time></span></p>
+
+                    <h2 class="title">
+                        <a href="{{ path('app_notre_actualites_detail',{'slug':evenement.slug}) }}">{{ evenement.title}}</a>
+                    </h2>
+
+                </article>
+            </div>
+            {% endfor %}
+
+        </div>
+        <div class="col-auto mt-5  text-center">
+            <a href="{{ path('app_notre_actualites') }}" class="btn btn-view-more rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2">
+                Voir plus d'articles <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+</section>

@@ -1,0 +1,133 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}
+
+    {% include 'navigation/header-on-page.html.twig' %}
+{% endblock %}
+
+{% block main %}
+
+<main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+        <div class="container position-relative">
+            <h1>Découvrez les filiales beforyou</h1>
+            <p>Nos filiales expriment chacune une expertise spécifique, orientée vers l’utilité, la
+                performance et la satisfaction client.</p>
+            <nav class="breadcrumbs">
+                <ol>
+                    <li><a href="{{ path('app_home') }}">Accueil</a></li>
+                    <li class="current">filiales</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- End Page Title -->
+
+    <!-- Featured Services Section -->
+    {% include 'sections/filiales.html.twig' %}
+    <!-- /Featured Services Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="service-item position-relative">
+                        <div class="img">
+                            <img src="assets/img/services-1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="details">
+                            <a href="{{ path('app_nos_filiales_detail', {slug:'beforyou-water'}) }}" class="stretched-link">
+                                <h3>BE FOR YOU WATER</h3>
+                            </a>
+                            <p>
+                                Société permettant aux populations, aux collectivités et aux particuliers d’accéder à l’eau par le biais des forages
+                            </p>
+                        </div>
+                    </div>
+                </div><!-- End filiale water -->
+
+                <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="service-item position-relative">
+                        <div class="img">
+                            <img src="assets/img/services-2.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="details">
+                            <a href="{{ path('app_nos_filiales_detail', {slug:'beforyou-print'}) }}" class="stretched-link">
+                                <h3>BE FOR YOU PRINT</h3>
+                            </a>
+                            <p>
+                                Entreprise technologique spécialisée dans l’impression numérique et la broderie industrielle
+
+                            </p>
+                        </div>
+                    </div>
+                </div><!-- End Filiale print -->
+
+                <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="service-item position-relative">
+                        <div class="img">
+                            <img src="assets/img/services-3.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="details">
+                            <a href="{{ path('app_nos_filiales_detail', {slug:'beforyou-communication'}) }}" class="stretched-link">
+                                <h3>BE FOR YOU COM</h3>
+                            </a>
+                            <p>
+                                Agence de communication et marketing, experte en communication digitale et événementiel. Nous offrons aussi aux PME et aux différents organismes, la création des sites web et applications mobiles
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Service filiale com -->
+
+                <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="service-item position-relative">
+                        <div class="img">
+                            <img src="assets/img/services-4.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="details">
+                            <a href="{{ path('app_nos_filiales_detail', {slug:'beforyou-school'}) }}" class="stretched-link">
+                                <h3>BE FOR YOU SCHOOL</h3>
+                            </a>
+                            <p>
+                                Notre première filiale, professionnelle dans la confection des uniformes scolaires, dans l’élaboration des chartes visuelles pour établissements scolaires.
+                            </p>
+                            <a href="{{ path('app_nos_filiales_detail', {slug:'beforyou-school'}) }}" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div><!-- End Service scholl -->
+
+                <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="service-item position-relative">
+                        <div class="img">
+                            <img src="assets/img/services-4.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="details">
+                            <a href="{{ path('app_nos_filiales_detail', {slug:'beforyou-industrie'}) }}" class="stretched-link">
+                                <h3>BE FOR YOU INDUSTRIE</h3>
+                            </a>
+                            <p>
+                                Structure dédiée à la construction, aux études de terrain et à la réhabilitation des bâtiments
+
+                            </p>
+                            <a href="{{ path('app_nos_filiales_detail', {slug:'beforyou-industrie'}) }}" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Service Industrie -->
+
+            </div>
+
+        </div>
+
+    </section><!-- /Services Section -->
+
+</main>
+
+{% endblock %}

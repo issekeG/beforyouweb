@@ -1,0 +1,100 @@
+<section class="featured-services section">
+    <div class="container section-title pb-1" data-aos="fade-up">
+        <h2>Filiale Industrie</h2>
+        <p>Liste des services de la filiale beforyou Industrie</p>
+    </div>
+
+    <div class="container">
+
+        <div class="swiper init-swiper">
+
+            <div class="swiper-wrapper align-items-center">
+
+                <!-- Construction -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-item item-cyan position-relative h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="icon">
+                                <i class="bi bi-building"></i> <!-- Icône adaptée pour la construction -->
+                            </div>
+                            <a href="{{ path('app_nos_services_detail', {slug: 'construction-batiments'}) }}" class="stretched-link">
+                                <h3>Construction de bâtiments</h3>
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ path('app_nos_services_detail', {slug: 'construction-batiments'}) }}" class="btn btn-sm btn-outline-primary">Consulter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Réhabilitation -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-item item-orange position-relative h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="icon">
+                                <i class="bi bi-tools"></i> <!-- Icône adaptée pour rénovation / travaux -->
+                            </div>
+                            <a href="{{ path('app_nos_services_detail', {slug: 'rehabilitation-batiments'}) }}" class="stretched-link">
+                                <h3>Réhabilitation de bâtiments</h3>
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ path('app_nos_services_detail', {slug: 'rehabilitation-batiments'}) }}" class="btn btn-sm btn-outline-primary">Consulter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Étude -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-item item-teal position-relative h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="icon">
+                                <i class="bi bi-diagram-3-fill"></i> <!-- Icône pour l'étude ou plans techniques -->
+                            </div>
+                            <a href="{{ path('app_nos_services_detail', {slug: 'etude'}) }}" class="stretched-link">
+                                <h3>Étude de bâtiments</h3>
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ path('app_nos_services_detail', {slug: 'etude'}) }}" class="btn btn-sm btn-outline-primary">Consulter</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <script type="application/json" class="swiper-config">
+                {
+                    "loop": true,
+                    "speed": 600,
+                    "autoplay": {
+                        "delay": 3000
+                    },
+                    "slidesPerView": "auto",
+                    "pagination": {
+                        "el": ".swiper-pagination",
+                        "type": "bullets",
+                        "clickable": true
+                    },
+                    "breakpoints": {
+                        "320": {
+                            "slidesPerView": 1,
+                            "spaceBetween": 10
+                        },
+                        "768": {
+                            "slidesPerView": 2,
+                            "spaceBetween": 35
+                        },
+
+                        "1200":  { "slidesPerView": 3, "spaceBetween": 40 },
+                        "1400":  { "slidesPerView": 4, "spaceBetween": 60 }
+                    }
+                }
+            </script>
+
+            <!-- Pagination si activée dans le JSON -->
+            <div class="swiper-pagination mt-3"></div>
+        </div>
+    </div>
+
+</section>

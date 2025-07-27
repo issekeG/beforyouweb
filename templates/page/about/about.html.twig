@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}
+
+    {% include 'navigation/header-on-page.html.twig' %}
+{% endblock %}
+
+{% block main %}
+<main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+        <div class="container position-relative">
+            <h1>Ce qu’il faut savoir sur Beforyou</h1>
+            <nav class="breadcrumbs">
+                <ol>
+                    <li><a href="{{ path('app_home') }}">Accueil</a></li>
+                    <li class="current">À propos de Beforyou</li>
+                </ol>
+            </nav>
+        </div>
+    </div><!-- End Page Title -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+        <div class="container">
+
+            <div class="row gy-4">
+                <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="100">
+                    <img src="{{ asset('assets/img/illustration.jpg' ) | imagine_filter('thumbnail_about') }}" alt="" class="img-fluid services-img">
+
+                    <a href="https://www.youtube.com/watch?v=EELN67KvJZw" class="glightbox pulsating-play-btn"></a>
+                </div>
+                <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
+                    <h3>BE FOR YOU, L’ENERGIE DU POSSIBLE  ?</h3>
+                    <p class="fst-italic">
+                        Le Groupe BE FOR YOU est une vision enracinée dans la réalité gabonaise et tournée vers l’impact. Acteur majeur et visionnaire, le Groupe rassemble plusieurs filiales spécialisées qui partagent une même ambition : servir, transformer et inspirer.
+                    </p>
+                    <p>Depuis sa création, le Groupe s’est construit autour de valeurs fortes</p>
+                    <ul>
+                        <li><i class="bi bi-check2-all"></i> <span>Professionnalisme : la rigueur guide chacune de nos actions.</span></li>
+                        <li><i class="bi bi-check2-all"></i> <span>Engagement : nous agissons avec responsabilité et impact.</span></li>
+                        <li><i class="bi bi-check2-all"></i> <span>Créativité : chaque solution est pensée sur mesure.</span></li>
+                        <li><i class="bi bi-check2-all"></i> <span>Proximité : être proche de nos clients et de leurs réalités.</span></li>
+                    </ul>
+                    <p>
+                        Grâce à une gouvernance solide et une stratégie de croissance maîtrisée, nous avons su développer un réseau d’entreprises complémentaires, chacune experte dans son secteur, pour répondre aux besoins d’un monde en constante évolution.
+                    </p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Stats Section -->
+    {% include 'sections/chiffres_cles.html.twig' %}
+    <!-- /Stats Section -->
+
+    <!-- Clients Section -->
+    {% include 'sections/nos_partenaires.html.twig' %}
+
+
+    {% include 'sections/temoignages.html.twig' %}
+
+</main>
+{% endblock %}

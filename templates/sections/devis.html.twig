@@ -1,73 +1,302 @@
 <section id="contact" class="contact section pb-0">
-    <div class="container section-title" data-aos="fade-up">
-        <h2>Avez-vous un projet que vous souhaitez réaliser ?</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-    </div><!-- End Section Title -->
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row gy-4">
-            <div class="col-lg-6 ">
-                <div class="row gy-4">
-
-                    <div class="col-lg-12">
-                        <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
-                            <i class="bi bi-geo-alt"></i>
-                            <h3>Address</h3>
-                            <p>A108 Adam Street, New York, NY 535022</p>
-                        </div>
-                    </div><!-- End Info Item -->
-
-                    <div class="col-md-6">
-                        <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
-                            <i class="bi bi-telephone"></i>
-                            <h3>Call Us</h3>
-                            <p>+1 5589 55488 55</p>
-                        </div>
-                    </div><!-- End Info Item -->
-
-                    <div class="col-md-6">
-                        <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
-                            <i class="bi bi-envelope"></i>
-                            <h3>Email Us</h3>
-                            <p>info@example.com</p>
-                        </div>
-                    </div><!-- End Info Item -->
-
-                </div>
+            <div class="col-12">
+                {% include 'block/contact/contact-info.html.twig' %}
             </div>
 
-            <div class="col-lg-6">
-                <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
-                    <div class="row gy-4">
+            <div class="col-lg-12">
+                <form id="devis-form" action="{{ path('app_nouveau_devis') }}" method="post" enctype="multipart/form-data" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
+                    <div class="container my-5">
 
-                        <div class="col-md-6">
-                            <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                        <!-- FILIALES -->
+                        <div class="row gy-4 text-center mb-5">
+                            <h4 class="mb-4 fw-bold text-primary">Choisissez une filiale <span class="text-danger">*</span></h4>
+
+                            <!-- Industrie -->
+                            <div class="col-lg-3 col-md-6">
+                                <input type="radio" class="btn-check" id="filiale-industrie" name="filiale" value="industrie" required>
+                                <label class="btn btn-outline-primary w-100 rounded-4 py-4 shadow-sm" for="filiale-industrie">
+                                    <i class="bi bi-gear-fill fs-2 d-block mb-2"></i> Industrie
+                                </label>
+                            </div>
+
+                            <!-- Communication -->
+                            <div class="col-lg-3 col-md-6">
+                                <input type="radio" class="btn-check" id="filiale-communication" name="filiale" value="communication" required>
+                                <label class="btn btn-outline-danger w-100 rounded-4 py-4 shadow-sm" for="filiale-communication">
+                                    <i class="bi bi-megaphone-fill fs-2 d-block mb-2"></i> Communication
+                                </label>
+                            </div>
+
+                            <!-- School -->
+                            <div class="col-lg-3 col-md-6">
+                                <input type="radio" class="btn-check" id="filiale-school" name="filiale" value="school" required>
+                                <label class="btn btn-outline-success w-100 rounded-4 py-4 shadow-sm" for="filiale-school">
+                                    <i class="bi bi-mortarboard-fill fs-2 d-block mb-2"></i> School
+                                </label>
+                            </div>
+
+                            <!-- Print -->
+                            <div class="col-lg-3 col-md-6">
+                                <input type="radio" class="btn-check" id="filiale-print" name="filiale" value="print" required>
+                                <label class="btn btn-outline-warning w-100 rounded-4 py-4 shadow-sm" for="filiale-print">
+                                    <i class="bi bi-printer-fill fs-2 d-block mb-2"></i> Print
+                                </label>
+                            </div>
+                            <!-- water -->
+                            <div class="col-lg-3 col-md-6">
+                                <input type="radio" class="btn-check" id="filiale-water" name="filiale" value="water" required>
+                                <label class="btn btn-outline-primary w-100 rounded-4 py-4 shadow-sm" for="filiale-water">
+                                    <i class="bi bi-gear-fill fs-2 d-block mb-2"></i> Water
+                                </label>
+                            </div>
                         </div>
 
-                        <div class="col-md-6 ">
-                            <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                        <!-- SERVICES -->
+                        <div class="mb-5" id="services-section">
+                            <!-- Industrie -->
+                            <div class="services-group" data-filiale="industrie" style="display: none;">
+                                <h5 class="mb-3">Services Industrie</h5>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <input type="checkbox" class="btn-check" id="industrie-etude" name="services[industrie][]" value="Etude">
+                                    <label class="btn btn-sm btn-outline-secondary" for="industrie-etude">Etude</label>
+
+                                    <input type="checkbox" class="btn-check" id="industrie-construction" name="services[industrie][]" value="Construction de bâtiments">
+                                    <label class="btn btn-sm btn-outline-secondary" for="industrie-construction">Construction de bâtiments</label>
+
+                                    <input type="checkbox" class="btn-check" id="industrie-réhabilitation" name="services[industrie][]" value="Réhabilitation de bâtiments">
+                                    <label class="btn btn-sm btn-outline-secondary" for="industrie-réhabilitation">Réhabilitation de bâtiments</label>
+                                </div>
+                            </div>
+
+                            <!-- Communication -->
+                            <div class="services-group" data-filiale="communication" style="display: none;">
+                                <h5 class="mb-3">Services Communication</h5>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <input type="checkbox" class="btn-check" id="communication-gestion-réseaux-sociaux" name="services[communication][]" value="Gestion de réseaux sociaux">
+                                    <label class="btn btn-sm btn-outline-secondary" for="communication-gestion-réseaux-sociaux">Gestion de réseaux sociaux</label>
+
+                                    <input type="checkbox" class="btn-check" id="communication-création-communication" name="services[communication][]" value="Création de la communication">
+                                    <label class="btn btn-sm btn-outline-secondary" for="communication-création-communication">Création de la communication</label>
+
+                                    <input type="checkbox" class="btn-check" id="communication-branding" name="services[communication][]" value="Branding, identité visuelle des PME & Institution">
+                                    <label class="btn btn-sm btn-outline-secondary" for="communication-branding">Branding, identité visuelle des PME & Institution</label>
+
+                                    <input type="checkbox" class="btn-check" id="communication-web-applications" name="services[communication][]" value="création de sites web et applications">
+                                    <label class="btn btn-sm btn-outline-secondary" for="communication-web-applications">création de sites web et applications</label>
+
+                                    <input type="checkbox" class="btn-check" id="communication-Conseils-stratégiques" name="services[communication][]" value="Conseils stratégiques en communication et marketing">
+                                    <label class="btn btn-sm btn-outline-secondary" for="communication-Conseils-stratégiques">Conseils stratégiques en communication et marketing</label>
+
+                                    <input type="checkbox" class="btn-check" id="communication-evenementiel" name="services[communication][]" value="Evenementiel">
+                                    <label class="btn btn-sm btn-outline-secondary" for="communication-evenementiel">Evenementiel</label>
+
+                                </div>
+                            </div>
+
+                            <!-- School -->
+                            <div class="services-group" data-filiale="school" style="display: none;">
+                                <h5 class="mb-3">Services School</h5>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <input type="checkbox" class="btn-check" id="school-Formation" name="services[school][]" value="Formation">
+                                    <label class="btn btn-sm btn-outline-secondary" for="school-Formation">Formation</label>
+
+                                    <input type="checkbox" class="btn-check" id="school-Reprographie" name="services[school][]" value="Reprographie">
+                                    <label class="btn btn-sm btn-outline-secondary" for="school-Reprographie">Reprographie</label>
+
+                                    <input type="checkbox" class="btn-check" id="school-Création-logos" name="services[school][]" value="Création de logos et chartes graphiques">
+                                    <label class="btn btn-sm btn-outline-secondary" for="school-Création-logos">Création de logos et chartes graphiques</label>
+
+                                    <input type="checkbox" class="btn-check" id="school-Design-documents" name="services[school][]" value="Design de documents administratifs scolaires">
+                                    <label class="btn btn-sm btn-outline-secondary" for="school-Design-documents">Design de documents administratifs scolaires</label>
+
+                                    <input type="checkbox" class="btn-check" id="school-Confection-uniforme" name="services[school][]" value="Confection d’uniformes sur mesure">
+                                    <label class="btn btn-sm btn-outline-secondary" for="school-Confection-uniforme">Confection d’uniformes sur mesure</label>
+
+                                    <input type="checkbox" class="btn-check" id="school-Broderie-professionnelle" name="services[school][]" value="Broderie professionnelle sur tissus">
+                                    <label class="btn btn-sm btn-outline-secondary" for="school-Broderie-professionnelle">Broderie professionnelle sur tissus</label>
+                                </div>
+                            </div>
+
+                            <!-- Print -->
+                            <div class="services-group" data-filiale="print" style="display: none;">
+                                <h5 class="mb-3">Services Print</h5>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <input type="checkbox" class="btn-check" id="print-Impression-numérique" name="services[print][]" value="Impression numérique">
+                                    <label class="btn btn-sm btn-outline-secondary" for="print-Impression-numérique">Impression numérique</label>
+
+                                    <input type="checkbox" class="btn-check" id="print-Affiches" name="services[print][]" value="Affiches">
+                                    <label class="btn btn-sm btn-outline-secondary" for="print-Affiches">Affiches</label>
+
+                                    <input type="checkbox" class="btn-check" id="print-Brochures" name="services[print][]" value="Brochures">
+                                    <label class="btn btn-sm btn-outline-secondary" for="print-Brochures">Brochures</label>
+
+                                    <input type="checkbox" class="btn-check" id="print-Cartes-visite" name="services[print][]" value="Cartes de visite">
+                                    <label class="btn btn-sm btn-outline-secondary" for="print-Cartes-visite">Cartes de visite</label>
+
+                                    <input type="checkbox" class="btn-check" id="print-Dépliants" name="services[print][]" value="Dépliants">
+                                    <label class="btn btn-sm btn-outline-secondary" for="print-Dépliants">Dépliants</label>
+
+                                    <input type="checkbox" class="btn-check" id="print-Stickers" name="services[print][]" value="Stickers">
+                                    <label class="btn btn-sm btn-outline-secondary" for="print-Stickers">Stickers</label>
+
+                                    <input type="checkbox" class="btn-check" id="print-Personnalisation-gadgets" name="services[print][]" value="Personnalisation de gadgets et objets publicitaires">
+                                    <label class="btn btn-sm btn-outline-secondary" for="print-Personnalisation-gadgets">Personnalisation de gadgets et objets publicitaires</label>
+
+                                    <input type="checkbox" class="btn-check" id="print-Broderie-industrielle" name="services[print][]" value="Broderie industrielle sur textile (polos, uniformes, casquettes)">
+                                    <label class="btn btn-sm btn-outline-secondary" for="print-Broderie-industrielle">Broderie industrielle sur textile (polos, uniformes, casquettes)</label>
+
+                                </div>
+                            </div>
+
+                            <div class="services-group" data-filiale="water" style="display: none;">
+                                <h5 class="mb-3">Services Water</h5>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <input type="checkbox" class="btn-check" id="water-Forage-puits" name="services[water][]" value="Forage de puits">
+                                    <label class="btn btn-sm btn-outline-secondary" for="water-Forage-puits">Forage de puits</label>
+
+                                    <input type="checkbox" class="btn-check" id="print-Suivi-entretien-régulier" name="services[water][]" value="Suivi et entretien régulier">
+                                    <label class="btn btn-sm btn-outline-secondary" for="print-Suivi-entretien-régulier">Suivi et entretien régulier</label>
+
+                                    <input type="checkbox" class="btn-check" id="water-Systèmes-stockage" name="services[water][]" value="Systèmes de stockage / distribution">
+                                    <label class="btn btn-sm btn-outline-secondary" for="water-Systèmes-stockage">Systèmes de stockage / distribution</label>
+
+                                    <input type="checkbox" class="btn-check" id="water-Installation-pompes" name="services[water][]" value="Installation de pompes manuelles et motorisées">
+                                    <label class="btn btn-sm btn-outline-secondary" for="water-Installation-pompes">Installation de pompes manuelles et motorisées</label>
+
+
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="col-md-12">
-                            <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                        <!-- INFOS UTILISATEUR -->
+                        <div class="row gy-4">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">Nom et prénom <span class="text-danger">*</span></label>
+                                <input type="text" id="name" name="name" class="form-control" required placeholder="Ex : Gickel OKABI">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                                <input type="email" id="email" name="email" class="form-control" required placeholder="Ex : gickel@email.com">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">Téléphone <span class="text-danger">*</span></label>
+                                <input type="text" id="phone" name="phone" class="form-control" required placeholder="Ex : +241 6 12 34 56 78">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="company" class="form-label">Entreprise</label>
+                                <input type="text" id="company" name="company" class="form-control" placeholder="Ex : Web Solutions SARL">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="budget" class="form-label">Budget estimé (CFA) <span class="text-danger">*</span></label>
+                                <input type="number" id="budget" name="budget" class="form-control" required placeholder="Ex : 300000">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="deadline" class="form-label">Délai souhaité</label>
+                                <input type="text" id="deadline" name="deadline" class="form-control" placeholder="Ex : 2 semaines">
+                            </div>
+
+                            <div class="col-md-12">
+                                <label for="message" class="form-label">Décrivez votre besoin <span class="text-danger">*</span></label>
+                                <textarea id="message" name="message" class="form-control" rows="5" required placeholder="Votre besoin *"></textarea>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label for="attachment" class="form-label">Fichier joint (brief, maquette…)</label>
+                                <input type="file" name="attachment" id="attachment" class="form-control" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg">
+                            </div>
+
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn btn-primary px-5 py-2 mt-4 rounded-pill">
+                                    <i class="bi bi-send-fill me-2"></i>Envoyer ma demande
+                                </button>
+                            </div>
                         </div>
-
-                        <div class="col-md-12">
-                            <textarea class="form-control" name="message" rows="4" placeholder="Message" required=""></textarea>
-                        </div>
-
-                        <div class="col-md-12 text-center">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                            <button type="submit">Send Message</button>
-                        </div>
-
                     </div>
                 </form>
-            </div><!-- End Contact Form -->
+
+                <!-- JS : services + validation -->
+                <script>
+                    function showError(input, message) {
+                        let existing = input.parentElement.querySelector('.invalid-feedback');
+                        if (existing) existing.remove();
+                        input.classList.add('is-invalid');
+                        const error = document.createElement('div');
+                        error.className = 'invalid-feedback';
+                        error.innerText = message;
+                        input.parentElement.appendChild(error);
+                    }
+
+                    function clearError(input) {
+                        input.classList.remove('is-invalid');
+                        let existing = input.parentElement.querySelector('.invalid-feedback');
+                        if (existing) existing.remove();
+                    }
+
+                    // Afficher services selon filiale
+                    document.querySelectorAll('input[name="filiale"]').forEach(radio => {
+                        radio.addEventListener('change', () => {
+                            const selected = radio.value;
+                            document.querySelectorAll('.services-group').forEach(group => {
+                                group.style.display = group.dataset.filiale === selected ? 'block' : 'none';
+                            });
+                        });
+                    });
+
+                    document.getElementById('devis-form').addEventListener('submit', function (e) {
+                        e.preventDefault();
+                        let valid = true;
+
+                        document.querySelectorAll('.form-control, .btn-check').forEach(clearError);
+
+                        const selectedFiliale = document.querySelector('input[name="filiale"]:checked');
+                        if (!selectedFiliale) {
+                            showError(document.querySelector('input[name="filiale"]'), "Veuillez sélectionner une filiale.");
+                            valid = false;
+                        }
+
+                        const filialeValue = selectedFiliale?.value;
+                        const serviceGroup = document.querySelector(`.services-group[data-filiale="${filialeValue}"]`);
+                        const checkedServices = serviceGroup ? Array.from(serviceGroup.querySelectorAll('input[type="checkbox"]:checked')) : [];
+
+                        if (serviceGroup && checkedServices.length === 0) {
+                            showError(serviceGroup.querySelector('input[type="checkbox"]'), "Sélectionnez au moins un service.");
+                            valid = false;
+                        }
+
+                        const requiredFields = [
+                            { name: 'name', msg: 'Nom requis.' },
+                            { name: 'email', msg: 'Email requis.' },
+                            { name: 'phone', msg: 'Téléphone requis.' },
+                            { name: 'message', msg: 'Message requis.' },
+                        ];
+
+                        requiredFields.forEach(({ name, msg }) => {
+                            const input = document.querySelector(`[name="${name}"]`);
+                            if (!input || input.value.trim() === '') {
+                                showError(input, msg);
+                                valid = false;
+                            }
+                        });
+
+                        if (!valid) return;
+
+                        const form = this;
+                         form.submit(); // Activer pour envoi réel
+                    });
+                </script>
+            </div>
+
+
+            <!-- End Contact Form -->
 
         </div>
 

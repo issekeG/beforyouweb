@@ -7,10 +7,11 @@
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #555555; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #1e4356; /* Color for headings, subheadings and title throughout the website */
+  --section-head-color: #CF191D;
   --accent-color: #68a4c4; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
@@ -74,6 +75,10 @@ h5,
 h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
+}
+
+.section-title h2{
+    color: var(--section-head-color);
 }
 
 /* PHP Email Form Messages
@@ -750,6 +755,14 @@ h6 {
   position: relative;
 }
 
+.page-header {
+    color: var(--default-color);
+    background-color: var(--background-color);
+    padding: 10px 0 80px 0;
+    text-align: center;
+    position: relative;
+}
+
 .page-title:before {
   content: "";
   background-color: color-mix(in srgb, var(--background-color), transparent 50%);
@@ -820,6 +833,7 @@ section,
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
+
 }
 
 .section-title h2:before {
@@ -872,7 +886,7 @@ section,
   top: 0;
   width: 130%;
   height: 95%;
-  background: linear-gradient(to right, color-mix(in srgb, var(--background-color), transparent 90%), var(--background-color)), url("../img/hero-bg.jpg") center top no-repeat;
+  background: linear-gradient(to right, color-mix(in srgb, var(--background-color), transparent 90%), var(--background-color)), url("../img/illustration2.jpg") center top no-repeat;
   background-size: cover;
   z-index: 0;
   border-radius: 0 0 50% 50%;
@@ -1210,12 +1224,12 @@ section,
 }
 
 .features .features-item+.features-item {
-  margin-top: 100px;
+  margin-top: 30px;
 }
 
 @media (max-width: 640px) {
   .features .features-item+.features-item {
-    margin-top: 40px;
+    margin-top: 30px;
   }
 }
 

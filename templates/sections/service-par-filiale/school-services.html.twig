@@ -1,0 +1,153 @@
+<section class="featured-services section">
+    <div class="container section-title pb-1" data-aos="fade-up">
+        <h2>Filiale School</h2>
+        <p>Liste des services de la filiale beforyou School</p>
+    </div>
+
+    <div class="container">
+
+        <div class="swiper init-swiper">
+
+
+
+            <div class="swiper-wrapper align-items-center">
+
+                <!-- Formation -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-item item-cyan position-relative h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="icon">
+                                <i class="bi bi-journal-bookmark-fill"></i>
+                            </div>
+                            <a href="{{ path('app_nos_services_detail', {slug: 'formation'}) }}" class="stretched-link">
+                                <h3>Formation</h3>
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ path('app_nos_services_detail', {slug: 'formation'}) }}" class="btn btn-sm btn-outline-primary">Consulter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reprographie -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-item item-orange position-relative h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="icon">
+                                <i class="bi bi-files-alt"></i>
+                            </div>
+                            <a href="{{ path('app_nos_services_detail', {slug: 'reprographie'}) }}" class="stretched-link">
+                                <h3>Reprographie</h3>
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ path('app_nos_services_detail', {slug: 'reprographie'}) }}" class="btn btn-sm btn-outline-primary">Consulter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Création de logos et chartes graphiques -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-item item-teal position-relative h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="icon">
+                                <i class="bi bi-brush-fill"></i>
+                            </div>
+                            <a href="{{ path('app_nos_services_detail', {slug: 'creation-logos-chartes-graphiques'}) }}" class="stretched-link">
+                                <h3>Création de logos et chartes graphiques</h3>
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ path('app_nos_services_detail', {slug: 'creation-logos-chartes-graphiques'}) }}" class="btn btn-sm btn-outline-primary">Consulter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design de documents administratifs scolaires -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-item item-red position-relative h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="icon">
+                                <i class="bi bi-file-earmark-text-fill"></i>
+                            </div>
+                            <a href="{{ path('app_nos_services_detail', {slug: 'design-documents-administratifs-scolaires'}) }}" class="stretched-link">
+                                <h3>Design de documents administratifs scolaires</h3>
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ path('app_nos_services_detail', {slug: 'design-documents-administratifs-scolaires'}) }}" class="btn btn-sm btn-outline-primary">Consulter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Confection d’uniformes sur mesure -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-item item-orange position-relative h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="icon">
+                                <i class="bi bi-scissors"></i>
+                            </div>
+                            <a href="{{ path('app_nos_services_detail', {slug: 'confection-uniformes-sur-mesure'}) }}" class="stretched-link">
+                                <h3>Confection d’uniformes sur mesure</h3>
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ path('app_nos_services_detail', {slug: 'confection-uniformes-sur-mesure'}) }}" class="btn btn-sm btn-outline-primary">Consulter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Broderie professionnelle sur tissus -->
+                <div class="swiper-slide" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-item item-orange position-relative h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="icon">
+                                <i class="bi bi-needle"></i>
+                            </div>
+                            <a href="{{ path('app_nos_services_detail', {slug: 'broderie-professionnelle-sur-tissus'}) }}" class="stretched-link">
+                                <h3>Broderie professionnelle sur tissus</h3>
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ path('app_nos_services_detail', {slug: 'broderie-professionnelle-sur-tissus'}) }}" class="btn btn-sm btn-outline-primary">Consulter</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <script type="application/json" class="swiper-config">
+                {
+                    "loop": true,
+                    "speed": 600,
+                    "autoplay": {
+                        "delay": 3000
+                    },
+                    "slidesPerView": "auto",
+                    "pagination": {
+                        "el": ".swiper-pagination",
+                        "type": "bullets",
+                        "clickable": true
+                    },
+                    "breakpoints": {
+                        "320": {
+                            "slidesPerView": 1,
+                            "spaceBetween": 10
+                        },
+                        "768": {
+                            "slidesPerView": 2,
+                            "spaceBetween": 35
+                        },
+
+                        "1200":  { "slidesPerView": 3, "spaceBetween": 40 },
+                        "1400":  { "slidesPerView": 4, "spaceBetween": 60 }
+                    }
+                }
+            </script>
+
+            <!-- Pagination si activée dans le JSON -->
+            <div class="swiper-pagination mt-3"></div>
+        </div>
+    </div>
+
+</section>
